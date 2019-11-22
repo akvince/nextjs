@@ -1,12 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
+import FontAwesome from 'react-fontawesome'
+import "../css/style.css"
 
 const links = [
-  {label: 'accueil', dataId: 'home', icon: 'icon-menu fas fa-home', href: '/'},
-  {label: 'compétences', dataId: 'skill', icon: 'icon-menu fas fa-wrench', href: 'skill'},
-  {label: 'Projets', dataId: 'project', icon: 'icon-menu fas fa-code-branch', href: 'project'},
-  {label: 'Demo', dataId: 'demo', icon: 'icon-menu fas fa-laptop-code', href: 'demo'},
-  {label: 'contact', dataId: 'contact', icon: 'icon-menu fas fa-at', href: 'contact'}
+  {label: 'accueil', dataId: 'home', icon: 'home', href: '/'},
+  {label: 'compétences', dataId: 'skill', icon: 'wrench', href: 'skill'},
+  {label: 'Projets', dataId: 'project', icon: 'code-branch', href: 'project'},
+  {label: 'Demo', dataId: 'demo', icon: 'laptop-code', href: 'demo'},
+  {label: 'contact', dataId: 'contact', icon: 'at', href: 'contact'}
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -15,15 +17,15 @@ const links = [
 const Nav = () => (
   <menu>
     {links.map(({ key, dataId, icon, href, label }) => (
-      <a className={"panel-button text-center"}
+      <Link>
+        <a className={"panel-button text-center"}
           href={href}
           id={dataId}
           key={dataId}>
-            <div>
-              <i className={icon}></i>
-            </div>
+            <FontAwesome className="icon-menu" name={icon} />
             <div className="font-small">{label}</div>
-        </a>
+          </a>
+      </Link>
     ))}
 
     <style jsx>{`

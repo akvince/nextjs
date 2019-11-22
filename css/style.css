@@ -1,0 +1,70 @@
+body, html{
+  margin:0;
+  padding:0;
+  color: #293133;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  padding-left: 0;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  body{
+    padding-left: 90px;
+    padding-bottom: 0;
+  }
+}
+h1{
+  font-size: 60px;
+}
+li{
+  cursor: pointer;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #293133;
+}
+footer{
+  color: gray;
+  z-index: 3;
+  position: fixed;
+  bottom: 60px;
+  right: 0;
+  left: 0px;
+  padding: 15px 0;
+}
+@media screen and (min-width: 768px) {
+  footer{
+    left: 90px;
+    bottom: 0;
+  }
+}
+/** utils **/
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.float-right{
+  float: right;
+}
+.font-small{
+  font-size: 12px;
+}
+.font-large{
+  font-size: 20px;
+}
+.margin-b{
+  margin-bottom: 20px;
+}
+.flex{
+  display: flex;
+}
+.flex-around{
+    justify-content: space-around;
+}
+.flex-middle{
+  align-items: center;
+}
