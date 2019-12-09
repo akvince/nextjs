@@ -1,40 +1,39 @@
 import React from 'react'
 import Nav from '../components/nav'
 
+const infos = [
+  {id: 'Nom & Prénom : ', test: 'Deflandre Vincent'},
+  {id: 'Date de naissance : ', test: '19/07/1990'},
+  {id: 'Profession : ', test: 'Développeur front-end'},
+  {id: 'Affectation : ', test: 'IT-Room'},
+  {id: 'Mission actuelle : ', test: 'La Redoute'},
+]
+
 const Home = () => (
   <div>
     <Nav />
 
-    <div className="hero">
-      <h1 className="title">Welcome to Next.js!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
-
-      <div className="row">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Learn more about Next.js in the documentation.</p>
-        </a>
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Next.js Learn &rarr;</h3>
-          <p>Learn about Next.js by following an interactive tutorial!</p>
-        </a>
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
-        </a>
+    <div id="home">
+      <div className="flex flex-around flex-middle">
+        <div className="first-content">
+          <div className="text-center margin-b">
+            <i className="fas fa-exclamation-triangle"></i> Work in progress <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div className="flex">
+            <div className="pict">
+              <i className="fas fa-user"></i>
+            </div>
+            <div id="presentation">
+              {infos.map((info) =>(
+                <div>{info.id} <span>{info.test}</span></div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
       .title {
         margin: 0;
         width: 100%;
